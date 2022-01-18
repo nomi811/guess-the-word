@@ -55,6 +55,15 @@ const makeGuess = function (guess) {
     message.innerText = "You've already guessed that letter. Try again!";
   } else {
     guessedLetters.push(guess);
-    console.log(guessedLetters);
+    guessedLettersDisplayed();
+  }
+};
+
+const guessedLettersDisplayed = function () {
+  guessedLettersElement.innerHTML = "";
+  for (const letter of guessedLetters) {
+    const li = document.createElement("li");
+    li.innerText = letter;
+    guessedLettersElement.append(li);
   }
 };
