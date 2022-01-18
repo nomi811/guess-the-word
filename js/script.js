@@ -22,7 +22,7 @@ placeholder(word);
 
 buttonGuess.addEventListener("click", function (e) {
   e.preventDefault();
-  const inputs = textInput.value;
-  console.log(inputs);
+  const guess = textInput.value;
+  console.log(guess);
   textInput.value = "";
 });
